@@ -1,1 +1,30 @@
-GET https://project1-krfr.onrender.com/users
+### Get all users
+GET http://localhost:3000/users
+
+### Get user by ID
+GET http://localhost:3000/users/68ca217ca9b80013dde209ee
+
+### Create User
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@example.com",
+    "username": "test1@test.com",
+    "name": "Hello1",
+    "ipaddress": "94.121.163.10"
+}
+
+### Update User
+POST http://localhost:3000/users/68ca22a3a9b80013dde209ef HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test1@example.com",
+    "username": "test2@test.com",
+    "name": "Hello2",
+    "ipaddress": "94.121.163.10"
+}
+
+### Delete Contact
+DELETE http://localhost:3000/users/68ca22a3a9b80013dde209ef
